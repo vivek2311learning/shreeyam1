@@ -9,8 +9,6 @@
     "lint": "next lint",
     "export": "next export"
   },
-
-
   "dependencies": {
     "animate.css": "^4.1.1",
     "mongoose": "^8.16.3",
@@ -18,6 +16,7 @@
     "nodemailer": "^7.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
