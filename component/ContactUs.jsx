@@ -111,7 +111,7 @@ function ContactUs() {
                   <input
                     type="text"
                     name="name"
-                    value={formData.name}
+                    value={formData.name ||""}
                     onChange={handleChange}
                     required
                     className="w-full bg-gray-100 rounded px-3 py-2 text-black focus:outline-none focus:ring focus:ring-blue-500 hover:ring-2 transition-all duration-300"
@@ -124,7 +124,7 @@ function ContactUs() {
                   <input
                     type="tel"
                     name="phone"
-                    value={formData.phone}
+                    value={formData.phone ||""}
                     onChange={handleChange}
                     required
                     className="w-full bg-gray-100 rounded px-3 py-2 text-black focus:outline-none focus:ring focus:ring-blue-500 hover:ring-2 transition-all duration-300"
@@ -135,7 +135,7 @@ function ContactUs() {
                   <input
                     type="email"
                     name="email"
-                    value={formData.email}
+                    value={formData.email||""}
                     onChange={handleChange}
                     required
                     className="w-full bg-gray-100 rounded px-3 py-2 text-black focus:outline-none focus:ring focus:ring-blue-500 hover:ring-2 transition-all duration-300"
@@ -145,7 +145,7 @@ function ContactUs() {
                   <label className="block text-sm font-medium">Message</label>
                   <textarea
                     name="message"
-                    value={formData.message}
+                    value={formData.message||""}
                     onChange={handleChange}
                     required
                     rows="4"
