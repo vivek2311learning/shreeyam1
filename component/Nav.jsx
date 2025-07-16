@@ -71,6 +71,7 @@ const Nav = () => {
                 <li><Link href="/legal" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/legal")}`}>Legal</Link></li>
                 <li><Link href="/arcitacure" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/arcitacure")}`}>Architecture</Link></li>
                 <li><Link href="/business" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/business")}`}>Business</Link></li>
+                <li><Link href="/engineering" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/engineering")}`}>Engineering</Link></li>
               </ul>
             </div>
           </li>
@@ -97,6 +98,7 @@ const Nav = () => {
                 <li><Link href="/legal" onClick={toggleMenu} className={isActive("/legal")}>Legal</Link></li>
                 <li><Link href="/arcitacure" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/arcitacure")}`}>Architecture</Link></li>
                 <li><Link href="/business" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/business")}`}>Business</Link></li>
+                <li><Link href="/engineering" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/engineering")}`}>Engineering</Link></li>
 
                 
               </ul> 
@@ -117,21 +119,3 @@ export default Nav;
 
 
 
-
-{/* <li><Link href="/architectural" onClick={toggleMenu} className={isActive("/architectural")}>Architectural</Link></li>
-                <li><Link href="/businessAnalysis" onClick={toggleMenu} className={isActive("/businessAnalysis")}>Business</Link></li><li>
-  <Link
-    href="/architectural"
-    className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/architectural")}`}
-  >
-    Architectural
-  </Link>
-</li>
-<li>
-  <Link
-    href="/businessAnalysis"
-    className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/businessAnalysis")}`}
-  >
-    Business
-  </Link>
-</li> */}
