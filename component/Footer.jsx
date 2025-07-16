@@ -99,8 +99,8 @@ const Footer = () => {
             </div>
 
             <p className="text-xl font-serif italic">Contact Us</p>
-            <p className="text-sm mt-1">9016960148</p>
-            <p className="text-sm">anisha@gmail.com</p>
+            <p className="text-sm mt-1">+91 9638007798</p>
+            <p className="text-sm">shreeyamconsultancy@gmail.com</p>
           </div>
         </div>
 
