@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import "animate.css";
@@ -24,18 +23,20 @@ const blogPosts = [
   },
 ];
 
-const BlogCard = ({ post }) => (
-  <div  className="bg-[#2c3e50] hover:bg-white hover:scale-105 text-white hover:text-[#2c3e50] rounded-bl-4xl rounded-tr-4xl p-6 transition-all duration-300">
-    <h3 className="font-semibold text-2xl font-serif">{post.title}</h3>
+const BlogCard = ({ post, delay }) => (
+  <div
+    className={`bg-[#2c3e50] hover:bg-white hover:scale-[1.02] text-white hover:text-[#2c3e50] rounded-bl-4xl rounded-tr-4xl p-6 transition-all duration-500 ease-in-out shadow-lg animate__animated animate__fadeInLeft ${delay}`}
+  >
+    <h3 className="font-semibold text-2xl font-serif mb-4">{post.title}</h3>
     <div className="flex flex-col md:flex-row gap-4">
       <img
         src={post.image}
         alt={post.title}
-        className="w-full md:w-48 object-cover rounded-3xl"
+        className="w-full md:w-60 h-40 object-cover rounded-3xl"
       />
-      <p className="text-lg">{post.excerpt}</p>
+      <p className="text-lg font-serif">{post.excerpt}</p>
     </div>
-    <button className="text-red-500 hover:underline text-left">
+    <button className="text-red-500 hover:underline text-left mt-4 font-serif">
       Read More..
     </button>
   </div>
@@ -44,18 +45,22 @@ const BlogCard = ({ post }) => (
 const Blogs = () => {
   return (
     <div className="relative font-serif">
-      <div className="relative">
-        <img src="blog.jpg" alt="Blog" className="w-full h-auto" />
+      <div className="relative overflow-hidden">
+        <img
+          src="blog.jpg"
+          alt="Blog"
+          className="relative w-full h-[70vh] md:h-[80vh] object-cover animate__animated animate__zoomIn"
+        />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-2xl md:text-4xl font-semibold italic font-serif animate__animated animate__fadeInDown animate__delay-1s">
           The Thinking Space of Shreeyam
         </div>
       </div>
 
-      <div className="px-4 py-8 ">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-[#2c3e50] font-serif">
+      <div className="px-4 py-8 text-center animate__animated animate__fadeInUp">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#2c3e50] font-serif">
           Latest news and inspirational stories
         </h2>
-        <p className="text-center text-[#34495e] font-serif">
+        <p className="text-[#34495e] font-serif">
           Check out our latest blog posts, articles and essential announcements.
         </p>
       </div>
@@ -63,7 +68,7 @@ const Blogs = () => {
       <div className="px-4 py-8 bg-amber-400">
         <div className="grid gap-6 max-w-6xl mx-auto">
           {blogPosts.map((post, idx) => (
-            <BlogCard key={idx} post={post} />
+            <BlogCard key={idx} post={post} delay={`animate__delay-${idx + 1}s`} />
           ))}
         </div>
       </div>
