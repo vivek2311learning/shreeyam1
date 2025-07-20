@@ -5,14 +5,14 @@ import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
+    <div className="font-serif">
       {/* Call-to-action section */}
       <div className="bg-[#2c3e50] text-gray-100 px-4 py-12 text-center">
         <p className="text-lg font-serif italic mb-4">
           For any queries or feedback, please
         </p>
         <Link href="/contact-us">
-          <button className="bg-gray-100 text-[#2c3e50] font-medium text-lg py-2 px-6 rounded-bl-4xl rounded-tr-4xl hover:rounded transition-all duration-300">
+          <button className="bg-gray-100 text-[#2c3e50] font-medium text-lg py-2 px-6 hover:scale-105 rounded-bl-4xl rounded-tr-4xl hover:rounded transition-all duration-300">
             Connect with us
           </button>
         </Link>
@@ -43,18 +43,18 @@ const Footer = () => {
           <div className="text-center">
             <p className="text-xl font-serif italic">Quick Links</p>
             <ul className="space-y-2 mt-4">
-              <li>
-                <Link href="/about-us" className="hover:underline font-serif">
+              <li className="hover:scale-110">
+                <Link href="/about-us">
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/career" className="hover:underline font-serif">
+              <li className="hover:scale-105">
+                <Link href="/career">
                   Career
                 </Link>
               </li>
-              <li>
-                <Link href="/blogs" className="hover:underline font-serif">
+              <li className="hover:scale-105">
+                <Link href="/blogs">
                   Blogs
                 </Link>
               </li>
@@ -65,18 +65,18 @@ const Footer = () => {
           <div className="text-center">
             <p className="text-xl font-serif italic">Services</p>
             <ul className="space-y-2 mt-4">
-              <li>
-                <Link href="/legal" className="hover:underline font-serif">
+              <li className="hover:scale-110">
+                <Link href="/legal" >
                   Legal
                 </Link>
               </li>
-              <li>
-                <Link href="/arcitacure" className="hover:underline font-serif">
+              <li className="hover:scale-110">
+                <Link href="/arcitacure">
                   Architecture
                 </Link>
               </li>
-              <li>
-                <Link href="/business" className="hover:underline font-serif">
+              <li className="hover:scale-110">
+                <Link href="/business">
                   Business
                 </Link>
               </li>
@@ -84,23 +84,23 @@ const Footer = () => {
           </div>
 
           {/* Social & Contact */}
-          <div className="text-center">
+          <div className="text-center tracking-wide">
             <p className="text-xl font-serif italic mb-4">Follow Us</p>
             <div className="flex justify-center gap-4 mb-4">
               <Link href="/facebook">
-                <FaFacebookSquare className="w-6 h-6 hover:text-blue-400" />
+                <FaFacebookSquare className="w-6 h-6  hover:scale-110" />
               </Link>
               <Link href="/twitter">
-                <FaTwitter className="w-6 h-6 hover:text-blue-400" />
+                <FaTwitter className="w-6 h-6 hover:scale-110" />
               </Link>
               <Link href="/linkedin">
-                <FaLinkedin className="w-6 h-6 hover:text-blue-400" />
+                <FaLinkedin className="w-6 h-6 hover:scale-110" />
               </Link>
             </div>
 
             <p className="text-xl font-serif italic">Contact Us</p>
-            <p className="text-sm mt-1">+91 9638007798</p>
-            <p className="text-sm">shreeyamconsultancy@gmail.com</p>
+            <p className="text-sm mt-1 mb-2 font-sans hover:scale-110 transition-all duration-300">+91 9638007798</p>
+            <p className="text-sm hover:scale-110 transition-all duration-300">shreeyamconsultancy@gmail.com</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Shreeyam. All rights reserved.
         </p>
       </footer>
-    </>
+    </div>
   );
 };
 

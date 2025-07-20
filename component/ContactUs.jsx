@@ -48,7 +48,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="relative w-full bg-cover bg-center min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
+    <div className="relative w-full bg-cover bg-center min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 font-serif">
       <div
         className="relative z-10 flex flex-col items-center justify-center w-full"
         style={{ backgroundImage: "url(/contact.jpg)" }}

@@ -13,14 +13,14 @@ const Legal = () => {
           className="w-full h-auto object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <p className="text-white text-center font-serif italic font-semibold text-lg sm:text-2xl md:text-3xl animate__animated animate__fadeInDown animate__delay-1s bg-black bg-opacity-40 px-4 py-2 rounded-lg">
+          <p className="text-white text-center font-serif italic font-semibold text-lg sm:text-2xl md:text-3xl animate__animated animate__fadeInDown animate__delay-1s px-4 py-2 rounded-lg">
             Our Expertise. Know more about what we do
           </p>
         </div>
       </div>
 
       {/* Legal Services Section */}
-      <div className="bg-gray-100 text-[#2c3e50] px-4 py-16">
+      <div className="bg-amber-400 text-[#2c3e50] px-4 py-16">
         <div className="flex items-center gap-2 mx-auto mb-8 w-fit font-serif">
           <div className="w-1 h-10 bg-[#2c3e50]"></div>
           <h2 className="text-2xl sm:text-3xl font-bold">Our Legal Services</h2>
@@ -31,7 +31,7 @@ const Legal = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-200 text-[#2c3e50] p-6 rounded-lg shadow-lg hover:bg-[#2c3e50] hover:text-white transition duration-300"
+              className="bg-gray-200 text-[#2c3e50] p-6 rounded-lg shadow-lg hover:bg-[#2c3e50] hover:text-white hover:scale-105 transition duration-400"
             >
               <h3 className="font-semibold text-lg mb-4">{service.title}</h3>
               <ul className="list-disc list-inside space-y-2 text-sm sm:text-base">

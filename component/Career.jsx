@@ -66,20 +66,20 @@ function Career() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full font-serif">
       {/* ... (banner and other parts unchanged) */}
 
       <div className="mt-16 px-4 max-w-7xl mx-auto mb-16">
         {/* ... (heading and image part) */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start ">
           <img
             src="/contact.jpg"
             alt="Career Contact"
             className="w-full h-auto object-cover rounded-md shadow-md"
           />
 
-          <div className="bg-[#2c3e50] text-white shadow-md rounded-md p-6 md:p-8">
+          <div className="bg-[#2c3e50] text-white shadow-md rounded-md p-6 md:p-8 mt-16">
             <h3 className="text-2xl font-bold mb-4 text-center">Send us your resume</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Inputs ... */}

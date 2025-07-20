@@ -25,7 +25,7 @@ const blogPosts = [
 ];
 
 const BlogCard = ({ post }) => (
-  <div className="p-6 md:p-12 bg-amber-400 hover:bg-gray-100 rounded-bl-4xl rounded-tr-4xl w-full space-y-4 text-gray-100 hover:text-[#2c3e50] transition-all duration-300">
+  <div  className="bg-[#2c3e50] hover:bg-white hover:scale-105 text-white hover:text-[#2c3e50] rounded-bl-4xl rounded-tr-4xl p-6 transition-all duration-300">
     <h3 className="font-semibold text-2xl font-serif">{post.title}</h3>
     <div className="flex flex-col md:flex-row gap-4">
       <img
@@ -33,7 +33,7 @@ const BlogCard = ({ post }) => (
         alt={post.title}
         className="w-full md:w-48 object-cover rounded-3xl"
       />
-      <p className="text-lg md:text-xl">{post.excerpt}</p>
+      <p className="text-lg">{post.excerpt}</p>
     </div>
     <button className="text-red-500 hover:underline text-left">
       Read More..
@@ -43,7 +43,7 @@ const BlogCard = ({ post }) => (
 
 const Blogs = () => {
   return (
-    <div className="relative">
+    <div className="relative font-serif">
       <div className="relative">
         <img src="blog.jpg" alt="Blog" className="w-full h-auto" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-2xl md:text-4xl font-semibold italic font-serif animate__animated animate__fadeInDown animate__delay-1s">
@@ -51,7 +51,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className="px-4 py-8 bg-gray-100">
+      <div className="px-4 py-8 ">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-[#2c3e50] font-serif">
           Latest news and inspirational stories
         </h2>
@@ -60,7 +60,7 @@ const Blogs = () => {
         </p>
       </div>
 
-      <div className="px-4 py-8 bg-gray-200">
+      <div className="px-4 py-8 bg-amber-400">
         <div className="grid gap-6 max-w-6xl mx-auto">
           {blogPosts.map((post, idx) => (
             <BlogCard key={idx} post={post} />

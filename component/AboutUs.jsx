@@ -1,10 +1,11 @@
 
 "use client";
 import React from "react";
+import "animate.css";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="font-serif">
       {/* Hero Section */}
       <div className="relative w-full">
         <img src="about.webp" alt="About Us" className="w-full h-auto object-cover" />
@@ -16,10 +17,10 @@ const AboutUs = () => {
       </div>
 
       {/* Welcome Section */}
-      <div className="px-4 py-8 bg-gray-100">
-        <div className="bg-amber-400 p-6 rounded-lg shadow-lg max-w-5xl mx-auto font-serif text-white">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl sm:text-3xl font-bold">Welcome to Our Company</h2>
+      <div className="px-4 py-8 bg-[#2c3e50]">
+        <div className="bg-amber-400 p-6 rounded-lg shadow-lg max-w-5xl mx-auto font-serif text-white animate__animated animate__fadeInLeft animate__delay-1s hover:scale-105 transition duration-400">
+          <div className="flex flex-col gap-4 text-[#2c3e50]">
+            <h2 className="text-4xl sm:text-3xl font-bold">Welcome to Our Company</h2>
             <p>
               We are committed to delivering the best products and services to our customers.
               Our team is dedicated to excellence and innovation.
@@ -46,17 +47,17 @@ const AboutUs = () => {
       </div>
 
       {/* Vision and Mission */}
-      <div className="px-4 py-8 bg-[#2c3e50] text-gray-100">
+      <div className="px-4 py-8 bg-gray-100 text-[#2c3e50]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto font-serif">
-          <div className="bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-[#2c3e50] hover:bg-gray-200 transition duration-300 ease-in-out">
-            <h3 className="text-2xl font-bold mb-2 text-center">Our Vision</h3>
+          <div className="bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out animate__animated animate__fadeInLeft animate__delay-1s">
+            <h3 className="text-4xl font-bold mb-2 text-center">Our Vision</h3>
             <p>
               To be a trusted partner that empowers clients to overcome challenges, make informed decisions,
               ensure compliance, drive growth, and shape purposeful spaces—through clarity, expertise, and solutions.
             </p>
           </div>
-          <div className="bg-amber-400 rounded-br-3xl shadow-lg p-6 hover:text-[#2c3e50] hover:bg-gray-200 transition duration-300 ease-in-out">
-            <h3 className="text-2xl font-bold mb-2 text-center">Our Mission</h3>
+          <div className="bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out animate__animated animate__fadeInRight animate__delay-1s">
+            <h3 className="text-4xl font-bold mb-2 text-center">Our Mission</h3>
             <p>
               To deliver high-quality, client-focused consulting services by integrating legal insight,
               strategic business analysis, and creative architectural thinking—ensuring every problem
@@ -68,8 +69,8 @@ const AboutUs = () => {
 
       {/* Core Values */}
       <div className="bg-[#2c3e50] px-4 py-8 text-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-2xl sm:text-3xl text-center mb-6 font-serif">Our Core Values</p>
+        <div className="mx-auto my-16 w-full max-w-6xl bg-amber-400 rounded-tr-4xl rounded-bl-4xl p-6 md:p-10 flex flex-col items-center gap-8">
+          <p className="sm:text-3xl text-center mb-6 font-serif text-[#2c3e50] font-semibold md:text-4xl">Our Core Values</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               {
@@ -91,7 +92,7 @@ const AboutUs = () => {
             ].map((val, i) => (
               <div
                 key={i}
-                className="p-4 bg-amber-400 rounded-xl text-[#2c3e50] hover:bg-gray-200 transition duration-300"
+                 className="p-6 bg-[#2c3e50] hover:bg-white hover:text-[#2c3e50] hover:scale-105 text-white rounded-3xl transition-all duration-300"
               >
                 <p className="text-lg font-semibold mb-2">{val.title}</p>
                 <p>{val.desc}</p>
@@ -113,8 +114,8 @@ const AboutUs = () => {
           </div>
 
           <div className="bg-[#2c3e50] text-white p-6 rounded-xl shadow-lg">
-            <p className="text-2xl sm:text-3xl text-center mb-4">
-              7 Reasons Why You Should Choose Our Service
+            <p className="text-2xl sm:text-3xl text-center mb-8">
+            Reasons Why You Should Choose Our Service
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -128,7 +129,7 @@ const AboutUs = () => {
               ].map((title, idx) => (
                 <div
                   key={idx}
-                  className="p-4 bg-amber-400 rounded-xl text-[#2c3e50] hover:bg-gray-200 transition duration-300"
+                  className="p-4 bg-amber-400 rounded-xl text-[#2c3e50] hover:bg-gray-200 transition duration-300 hover:scale-105"
                 >
                   <p className="text-lg font-semibold mb-2">{title}</p>
                   <p>
