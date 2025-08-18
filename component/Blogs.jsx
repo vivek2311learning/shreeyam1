@@ -44,7 +44,7 @@ const BlogCard = ({ post, delay }) => (
 
 const Blogs = () => {
   return (
-    <div className="relative font-serif">
+    <div className="relative font-serif mt-20">
       <div className="relative overflow-hidden">
         <img
           src="blog.jpg"

@@ -24,11 +24,15 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Branding */}
           <div className="text-center md:text-left">
-            <div className="flex flex-col gap-1">
-              <p className="text-3xl font-serif italic font-bold">Shreeyam</p>
-              <p className="font-serif italic text-xs">Consultancy</p>
-            </div>
-            <p className="text-sm mt-2">
+             <div className="flex flex-col items-center tracking-widest">
+          <img
+            src="/logo.jpg"
+            alt="Shreeyam Consultancy Logo"
+            className="h-12 w-auto object-contain"
+          />
+          <p className="font-serif text-xl">CONSULTANCY</p>
+        </div>
+            <p className="text-sm mt-2 tracking-wide">
               Your trusted partner in legal, business, and architectural
               solutions.
             </p>
@@ -51,6 +55,11 @@ const Footer = () => {
               <li className="hover:scale-105">
                 <Link href="/career">
                   Career
+                </Link>
+              </li>
+              <li className="hover:scale-105">
+                <Link href="/contact-us">
+                  Contact Us
                 </Link>
               </li>
               <li className="hover:scale-105">
@@ -78,6 +87,11 @@ const Footer = () => {
               <li className="hover:scale-110">
                 <Link href="/business">
                   Business
+                </Link>
+              </li>
+              <li className="hover:scale-110">
+                <Link href="/engineering">
+                  Engineering
                 </Link>
               </li>
             </ul>

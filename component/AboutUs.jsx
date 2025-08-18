@@ -33,7 +33,7 @@ const AboutUs = () => {
     inView ? `animate__animated ${animation}` : "opacity-0";
 
   return (
-    <div className="font-serif">
+    <div className="font-serif mt-20">
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-[80vh]" ref={heroRef}>
         <img
@@ -55,87 +55,94 @@ const AboutUs = () => {
 
       {/* Welcome Section */}
       <section className="px-4 py-12 bg-[#2c3e50]" ref={welcomeRef}>
-        <div
-          className={`bg-amber-400 p-6 rounded-lg shadow-lg max-w-5xl mx-auto font-serif text-white transition duration-400 hover:scale-105 ${animateText(
-            welcomeInView,
-            "animate__fadeInLeft"
-          )}`}
-        >
-          <div
-            className={`flex flex-col gap-4 text-[#2c3e50] group ${animateText(
-              welcomeInView,
-              "animate__fadeInUp"
-            )}`}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Welcome to Our Company
-            </h2>
-            <p>
-              We are committed to delivering the best products and services to
-              our customers. Our team is dedicated to excellence and innovation.
-            </p>
-            <p>
-              Shreeyam Consultancy is a multidisciplinary professional firm
-              offering specialized consulting services in three distinct
-              domains: Legal Consultancy, Business Analysis and Architectural
-              Consulting.
-            </p>
-            <p>
-              We believe that success is built on the pillars of clarity,
-              precision and innovation—whether it's navigating legal
-              complexities, unlocking business growth or designing purposeful
-              spaces.
-            </p>
-            <p>
-              Each of our service verticals is led by dedicated professionals
-              with deep domain expertise. We ensure every client receives
-              personalized attention and solution-driven guidance.
-            </p>
-            <p>
-              Guided by our philosophy—“Where Every Problem Meets the Right
-              Solution”—we strive to be trusted problem-solvers.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div
+    className={`bg-amber-400 p-6 rounded-lg shadow-lg max-w-5xl mx-auto font-serif text-white transition duration-400 hover:scale-105 ${animateText(
+      welcomeInView,
+      "animate__fadeInLeft"
+    )}`}
+  >
+    <div
+      className={`flex flex-col gap-4 text-[#2c3e50] group ${animateText(
+        welcomeInView,
+        "animate__fadeInUp"
+      )}`}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold">
+        Welcome to Our Company
+      </h2>
+      <p>
+        We are committed to delivering the best solutions to our clients. 
+        Our team blends <strong>excellence, expertise, and innovation</strong> 
+        to create meaningful impact.
+      </p>
+      <p>
+        <span className="font-semibold">Shreeyam Consultancy</span> is a 
+        multidisciplinary professional firm offering specialized consulting 
+        services across four domains: 
+        <strong> Legal, Business, Architecture, and Engineering</strong>.
+      </p>
+      <p>
+        Whether it’s <em>navigating legal complexities, driving business growth, 
+        designing purposeful spaces, or delivering innovative engineering 
+        solutions</em> — we provide clarity, precision, and innovation in every project.
+      </p>
+      <p>
+        Each vertical is led by dedicated professionals with deep domain expertise, 
+        ensuring every client receives <strong>personalized, solution-driven guidance</strong>.
+      </p>
+      <p>
+        Guided by our philosophy — 
+        <q>Where Every Problem Meets the Right Solution</q> — 
+        we strive to be your trusted partner in success.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Vision and Mission */}
       <div className="px-4 py-8 bg-gray-100 text-[#2c3e50]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto font-serif">
-          <div
-            ref={visionRef}
-            className={`bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out ${
-              visionInView
-                ? "animate__animated animate__fadeInLeft"
-                : "opacity-0"
-            }`}
-          >
-            <h3 className="text-4xl font-bold mb-2 text-center">Our Vision</h3>
-            <p>
-              To be a trusted partner that empowers clients to overcome
-              challenges, make informed decisions, ensure compliance, drive
-              growth, and shape purposeful spaces—through clarity, expertise,
-              and solutions.
-            </p>
-          </div>
-          <div
-            ref={missionRef}
-            className={`bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out ${
-              missionInView
-                ? "animate__animated animate__fadeInRight"
-                : "opacity-0"
-            }`}
-          >
-            <h3 className="text-4xl font-bold mb-2 text-center">Our Mission</h3>
-            <p>
-              To deliver high-quality, client-focused consulting services by
-              integrating legal insight, strategic business analysis, and
-              creative architectural thinking—ensuring every problem is met with
-              the right solution.
-            </p>
-          </div>
-        </div>
-      </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto font-serif">
+    {/* Vision */}
+    <div
+      ref={visionRef}
+      className={`bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out ${
+        visionInView
+          ? "animate__animated animate__fadeInLeft"
+          : "opacity-0"
+      }`}
+    >
+      <h3 className="text-4xl font-bold mb-2 text-center">Our Vision</h3>
+      <p>
+        To be a <strong>trusted multidisciplinary partner</strong> that empowers 
+        clients to overcome challenges, make informed decisions, ensure 
+        compliance, accelerate growth, design purposeful spaces, and 
+        deliver sustainable engineering solutions — driven by clarity, 
+        expertise, and innovation.
+      </p>
+    </div>
+
+    {/* Mission */}
+    <div
+      ref={missionRef}
+      className={`bg-amber-400 rounded-tl-3xl shadow-lg p-6 hover:text-gray-200 hover:scale-105 hover:bg-[#2c3e50] transition duration-300 ease-in-out ${
+        missionInView
+          ? "animate__animated animate__fadeInRight"
+          : "opacity-0"
+      }`}
+    >
+      <h3 className="text-4xl font-bold mb-2 text-center">Our Mission</h3>
+      <p>
+        To deliver <strong>high-quality, client-focused consulting services</strong> 
+        by integrating <em>legal insight, strategic business analysis, 
+        innovative architectural design, and forward-thinking engineering</em>.  
+        We aim to ensure that <strong>every problem meets the right solution</strong>, 
+        building long-term value for our clients.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Core Values */}
       <div className="bg-[#2c3e50] px-4 py-8 text-white" ref={valuesRef}>
@@ -219,7 +226,7 @@ const AboutUs = () => {
                     {
                       [
                         "We begin by understanding your challenges—your goals shape our solutions.",
-                        "Each client is unique. We provide customized strategies tailored to your needs.",
+                        "Each client is unique. We provide customized strategies customized to your needs.",
                         "We invest in legal literacy, workshops and knowledge-building for empowerment.",
                         "Each domain is led by experts. We provide deep specialization in every vertical.",
                         "We don’t just advise—we solve real-world problems with measurable outcomes.",

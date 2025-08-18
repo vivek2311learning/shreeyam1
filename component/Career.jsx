@@ -66,7 +66,7 @@ function Career() {
   };
 
   return (
-    <div className="relative w-full font-serif">
+    <div className="relative w-full font-serif mt-20">
       <div className="relative overflow-hidden">
         <img
           src="career.jpg"

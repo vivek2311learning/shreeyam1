@@ -1,9 +1,9 @@
 // pages/business/page.tsx
 
-import BusinessAnalysis from '@/component/BusinessAnalysis';
+import BusinessConsulting from '@/component/BusinessConsulting';
 import React from 'react';
 
-export const metadata = {
+export const metadata = { 
   title: "Business Consulting Services | Shreeyam Consultancy",
   description:
     "Accelerate your business growth with tailored consulting services, strategic planning, market research, and financial analysis from industry experts.",
@@ -34,7 +34,7 @@ export const metadata = {
 };
 
 const BusinessPage = () => {
-  return <BusinessAnalysis />;
+  return <BusinessConsulting />;
 };
 
 export default BusinessPage;

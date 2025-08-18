@@ -4,7 +4,7 @@ import React from "react";
 import "animate.css";
 import { useInView } from "react-intersection-observer";
 
-const Architecture = () => {
+const BusinessConsulting = () => {
   const [heroRef, heroInView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -22,8 +22,8 @@ const Architecture = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-[80vh]" ref={heroRef}>
         <img
-          src="/architecture.jpg"
-          alt="Architectural Design"
+          src="/business.webp"
+          alt="Business Consulting"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 flex items-center justify-center px-4 bg-black/40">
@@ -33,7 +33,7 @@ const Architecture = () => {
               "animate__fadeInDown"
             )}`}
           >
-            Innovative Designs. Sustainable Solutions.
+            Strategy. Growth. Business Transformation.
           </p>
         </div>
       </div>
@@ -50,16 +50,15 @@ const Architecture = () => {
           )}`}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-            Our Architectural Services
+            Our Business Consulting Services
           </h2>
           <p className="text-base sm:text-lg max-w-2xl mx-auto">
-            Transforming spaces through thoughtful planning, sustainable
-            materials, and modern aesthetics.
+            Empowering businesses with insights, strategies, and solutions for sustainable growth.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto ">
-          {architectureServices.map((service, index) => (
+          {consultingServices.map((service, index) => (
             <div
               key={index}
               className={`bg-white text-[#2c3e50] p-6 rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105 group animate__animated ${
@@ -86,97 +85,97 @@ const Architecture = () => {
   );
 };
 
-const architectureServices = [
+const consultingServices = [
   {
-    title: "Residential Architecture",
+    title: "Strategy Consulting",
     points: [
-      "Custom Home Design",
-      "Renovations & Additions",
-      "Sustainable Housing Plans",
-      "Interior-Exterior Integration",
-      "Landscape Architecture",
+      "Corporate Strategy Development",
+      "Business Transformation Plans",
+      "Growth & Expansion Strategies",
+      "Competitive Market Analysis",
+      "Innovation Roadmaps",
     ],
   },
   {
-    title: "Commercial Architecture",
+    title: "Management Consulting",
     points: [
-      "Retail Space Planning",
-      "Office Design & Layout",
-      "Hospitality & Restaurant Design",
-      "Industrial Architecture",
-      "Mixed-Use Development",
+      "Organizational Restructuring",
+      "Change Management",
+      "Leadership Development",
+      "Operational Efficiency",
+      "Performance Monitoring",
     ],
   },
   {
-    title: "Urban Planning",
+    title: "Financial Advisory",
     points: [
-      "Cityscape Design",
-      "Community Development Plans",
-      "Transit-Oriented Planning",
-      "Zoning & Land Use Analysis",
-      "Smart City Concepts",
+      "Budgeting & Forecasting",
+      "Mergers & Acquisitions Support",
+      "Capital Structure Planning",
+      "Risk & Compliance Advisory",
+      "Cost Optimization",
     ],
   },
   {
-    title: "Interior Architecture",
+    title: "Marketing & Sales Consulting",
     points: [
-      "Space Optimization",
-      "Custom Furniture Layout",
-      "Lighting & Acoustics Planning",
-      "Material & Color Consultation",
-      "Smart Home Integration",
+      "Market Research & Analysis",
+      "Brand Positioning Strategies",
+      "Sales Process Optimization",
+      "Digital Marketing Strategy",
+      "Customer Engagement Solutions",
     ],
   },
   {
-    title: "Sustainable Design",
+    title: "Human Resources Consulting",
     points: [
-      "Energy-Efficient Structures",
-      "LEED Certification Consulting",
-      "Green Material Selection",
-      "Passive Solar Design",
-      "Rainwater Harvesting Systems",
+      "Talent Acquisition Strategy",
+      "Employee Retention Plans",
+      "Training & Development Programs",
+      "Compensation & Benefits Design",
+      "HR Policy Development",
     ],
   },
   {
-    title: "3D Visualization & BIM",
+    title: "Technology Consulting",
     points: [
-      "Photorealistic Renderings",
-      "Virtual Walkthroughs",
-      "Building Information Modeling (BIM)",
-      "Concept to Construction Animations",
-      "Clash Detection & Analysis",
+      "Digital Transformation",
+      "IT Infrastructure Planning",
+      "ERP & CRM Implementation",
+      "Cybersecurity Advisory",
+      "Automation & AI Solutions",
     ],
   },
   {
-    title: "Heritage & Conservation",
+    title: "Operations Consulting",
     points: [
-      "Historic Building Restoration",
-      "Adaptive Reuse Projects",
-      "Cultural Landscape Preservation",
-      "Material Matching Techniques",
-      "Regulatory Compliance Guidance",
+      "Supply Chain Optimization",
+      "Lean Process Design",
+      "Logistics & Distribution Planning",
+      "Quality Management Systems",
+      "Inventory Control Strategies",
     ],
   },
   {
-    title: "Construction Documentation",
+    title: "Risk & Compliance Consulting",
     points: [
-      "Detailed Drawings & Blueprints",
-      "Site Planning & Surveys",
-      "Permit-Ready Documentation",
-      "Specification Writing",
-      "On-Site Construction Guidance",
+      "Regulatory Compliance",
+      "Corporate Governance",
+      "Internal Audit & Controls",
+      "Fraud Risk Management",
+      "Crisis Management",
     ],
   },
   {
-    title: "Architectural Consulting",
+    title: "Sustainability Consulting",
     points: [
-      "Feasibility Studies",
-      "Design Review & Evaluation",
-      "Cost Estimation & Budgeting",
-      "Material Selection Support",
-      "Project Coordination",
+      "Sustainable Business Models",
+      "Green Supply Chain Planning",
+      "CSR Strategy Development",
+      "ESG Reporting & Compliance",
+      "Energy Efficiency Solutions",
     ],
   },
 ];
 
-export default Architecture;
+export default BusinessConsulting;

@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
@@ -6,82 +5,103 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
 
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 const Home = () => {
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
   }, []);
 
   return (
-    <main className="font-serif tracking-wide">
-      {/* Hero Section */}
+    <main className="font-serif tracking-wide mt-20">
+      {/* Hero Section (Swiper Slider) */}
       <section className="relative w-full h-[90vh] sm:h-screen overflow-hidden">
-        <video
-          src="home1.mp4"
-          autoPlay
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          navigation
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 bg-black/30">
-          <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-semibold italic leading-tight">
-            <p data-aos="fade-right" data-aos-delay="300">
-              Where Every Problem Meets the
-            </p>
-            <p data-aos="fade-right" data-aos-delay="600">
-              Right Solution
-            </p>
-          </h1>
-        </div>
+          className="w-full h-full"
+        >
+          {[
+            { src: "hero1.jpg", text1: "Where Every Problem", text2: "Meets the Right Solution" },
+            { src: "hero2.jpg", text1: "Clarity. Precision.", text2: "Innovation at Every Step" },
+            { src: "hero3.jpg", text1: "Consulting That", text2: "Drives Growth" },
+            { src: "hero4.jpg", text1: "Designing Purposeful", text2: "Spaces & Strategies" },
+          ].map(({ src, text1, text2 }, i) => (
+            <SwiperSlide key={i}>
+              <div className="relative w-full h-[90vh] sm:h-screen">
+                <img
+                  src={src}
+                  alt={`Hero ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 bg-black/40">
+                  <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-semibold italic leading-tight">
+                    <p data-aos="fade-right" data-aos-delay="300">
+                      {text1}
+                    </p>
+                    <p data-aos="fade-right" data-aos-delay="600">
+                      {text2}
+                    </p>
+                  </h1>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
       {/* Who We Are */}
-      <section className="bg-[#2c3e50] text-white py-16 px-4">
-        <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 bg-amber-400 rounded-tr-4xl rounded-bl-4xl overflow-hidden">
-          <div className="flex justify-center items-center p-4">
-            <img
-              src="consulting.png"
-              alt="Consulting illustration"
-              className="w-full max-w-md object-contain rounded-4xl hover:scale-105 transition-transform duration-400"
-              data-aos="fade-right"
-            />
-          </div>
-          <div className="flex flex-col justify-center gap-4 text-[#2c3e50] p-4">
-            <h2 className="text-3xl sm:text-4xl font-bold" data-aos="fade-up">
-              Who we are
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-              Shreeyam Consultancy is a multidisciplinary professional firm
-              offering specialized consulting services in legal, business, and
-              architectural domains.
-            </p>
-            <p data-aos="fade-up" data-aos-delay="200">
-              We believe in clarity, precision and innovation—whether it’s
-              navigating legal complexities, unlocking business growth or
-              designing purposeful spaces.
-            </p>
-            <p data-aos="fade-up" data-aos-delay="300">
-              Our services are led by dedicated professionals with deep domain
-              expertise. Every client receives personalized, solution-driven
-              guidance.
-            </p>
-            <p data-aos="fade-up" data-aos-delay="400">
-              Guided by our philosophy—“Where Every Problem Meets the Right
-              Solution”—we strive to be your trusted partner in solving
-              challenges.
-            </p>
-            <Link href="/about-us">
-              <button
-                className="bg-[#2c3e50] text-white py-2 px-4 w-max rounded-tr-4xl rounded-bl-4xl hover:scale-105 transition-all duration-300"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                Read More
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
+  <section className="bg-[#2c3e50] text-white py-16 px-4">
+  <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 bg-amber-400 rounded-tr-4xl rounded-bl-4xl overflow-hidden">
+    <div className="flex justify-center items-center p-4">
+      <img
+        src="legal.webp"
+        alt="Consulting illustration"
+        className="w-full max-w-md object-contain rounded-4xl hover:scale-105 transition-transform duration-400"
+        data-aos="fade-right"
+      />
+    </div>
+    <div className="flex flex-col justify-center gap-4 text-[#2c3e50] p-4">
+      <h2 className="text-3xl sm:text-4xl font-bold" data-aos="fade-up">
+        Who We Are
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        At <span className="font-semibold">Shreeyam Consultancy</span>, we are a multidisciplinary team of professionals 
+        providing end-to-end solutions in <strong>Business, Legal, Architecture, and Engineering consulting</strong>.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Our approach combines <strong>strategic insights, technical expertise, and creative innovation</strong> 
+        to help clients overcome challenges, seize opportunities, and achieve sustainable growth. 
+      </p>
+      <p data-aos="fade-up" data-aos-delay="300">
+        Whether it’s <em>navigating legal complexities, accelerating business performance, 
+        designing purposeful spaces, or delivering innovative engineering solutions</em>—
+        we provide customized guidance that drives lasting results.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Guided by our philosophy <q>Where Every Problem Meets the Right Solution</q>, 
+        we aim to be a trusted partner in every step of your journey.
+      </p>
+      <Link href="/about-us">
+        <button
+          className="bg-[#2c3e50] text-white py-2 px-4 w-max rounded-tr-4xl rounded-bl-4xl hover:scale-105 transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          Read More
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Our Services */}
       <section className="bg-gray-100 text-white py-16 px-4">
@@ -106,7 +126,10 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="p-4 flex flex-col items-center gap-4" data-aos="fade-left">
+          <div
+            className="p-4 flex flex-col items-center gap-4"
+            data-aos="fade-left"
+          >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { href: "/legal", label: "Legal Consultancy", img: "law.svg" },
@@ -114,6 +137,16 @@ const Home = () => {
                   href: "/business",
                   label: "Business Analysis",
                   img: "corporate.svg",
+                },
+                {
+                  href: "/arcitacure",
+                  label: "Architectural Consulting",
+                  img: "architect.svg",
+                },
+                {
+                  href: "/engineering",
+                  label: "Engineering Consulting",
+                  img: "engineering.svg",
                 },
               ].map(({ href, label, img }) => (
                 <Link key={label} href={href} className="group">
@@ -128,16 +161,6 @@ const Home = () => {
                 </Link>
               ))}
             </div>
-            <Link href="/arcitacure" className="group">
-              <div className="w-60 h-48 bg-gray-300 text-[#2c3e50] hover:bg-[#2c3e50] hover:scale-105 hover:text-gray-300 transition-all duration-300 p-4 rounded-4xl text-center">
-                <p className="mb-2">Architectural Consulting</p>
-                <img
-                  src="architect.svg"
-                  alt="Architectural"
-                  className="mx-auto w-12 group-hover:invert"
-                />
-              </div>
-            </Link>
           </div>
         </div>
       </section>
@@ -153,9 +176,18 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              ["Expertise", "Our team consists of industry experts with years of experience."],
-              ["Tailored Solutions", "We provide customized solutions to meet your specific needs."],
-              ["Proven Track Record", "Our success stories speak for themselves."],
+              [
+                "Expertise",
+                "Our team consists of industry experts with years of experience.",
+              ],
+              [
+                "Customised Solutions",
+                "We provide customized solutions to meet your specific needs.",
+              ],
+              [
+                "Proven Track Record",
+                "Our success stories speak for themselves.",
+              ],
               ["Client-Centric Approach", "Your satisfaction is our priority."],
             ].map(([title, desc], idx) => (
               <div
@@ -192,12 +224,13 @@ const Home = () => {
               },
               {
                 title: "The Power of Business Analysis in Driving Growth",
-                img: "businessPower.jpg",
+                img: "businessPower.webp",
                 content:
                   "Business analysis is the backbone of strategic growth. Learn how data-driven insights and market analysis can propel your organization forward.",
               },
               {
-                title: "The Importance of Architectural Consulting in Modern Design",
+                title:
+                  "The Importance of Architectural Consulting in Modern Design",
                 img: "architectureDesign.jpg",
                 content:
                   "Architectural consulting is key to creating functional and inspiring spaces. Explore how experts shape the environments we live and work in.",
@@ -209,7 +242,9 @@ const Home = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <h3 className="font-semibold text-xl sm:text-2xl font-serif mb-4">{title}</h3>
+                <h3 className="font-semibold text-xl sm:text-2xl font-serif mb-4">
+                  {title}
+                </h3>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <img
                     src={img}
@@ -244,4 +279,3 @@ const Home = () => {
 };
 
 export default Home;
-

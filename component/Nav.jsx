@@ -41,7 +41,15 @@ const Nav = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        <div className="flex flex-col gap-1"><p className="text-3xl font-serif italic font-bold">Shreeyam</p><p className="font-serif italic text-xs">Consultancy</p></div>
+        <div className="flex flex-col items-center tracking-widest">
+          <img
+            src="/logo.jpg"
+            alt="Shreeyam Consultancy Logo"
+            className="h-12 w-auto object-contain"
+          />
+          <p className="font-serif text-xl">CONSULTANCY</p>
+        </div>
+
 
 
         <button className="md:hidden" onClick={toggleMenu}>
@@ -95,10 +103,10 @@ const Nav = () => {
             </button>
             {isOpen && (
               <ul className="mt-2 ml-4 space-y-2 text-sm text-gray-200">
-                <li><Link href="/legal" onClick={toggleMenu} className={isActive("/legal")}>Legal</Link></li>
-                <li><Link href="/arcitacure" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/arcitacure")}`}>Architecture</Link></li>
-                <li><Link href="/business" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/business")}`}>Business</Link></li>
-                <li><Link href="/engineering" className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/engineering")}`}>Engineering</Link></li>
+                <li><Link href="/legal" onClick={toggleMenu} className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/legal")}`}>Legal</Link></li>
+                <li><Link href="/arcitacure" onClick={toggleMenu} className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/arcitacure")}`}>Architecture</Link></li>
+                <li><Link href="/business" onClick={toggleMenu} className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/business")}`}>Business</Link></li>
+                <li><Link href="/engineering" onClick={toggleMenu} className={`block px-2 py-1 rounded hover:bg-blue-100 transition-all ${isActive("/engineering")}`}>Engineering</Link></li>
 
                 
               </ul> 
