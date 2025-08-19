@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="font-serif text-xl">CONSULTANCY</p>
         </div>
             <p className="text-sm mt-2 tracking-wide">
-              Your trusted partner in legal, business, and architectural
+              Your trusted partner in legal, business, architectural and engineering
               solutions.
             </p>
             <Link href="/contact-us" className="block mt-4">

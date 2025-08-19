@@ -11,7 +11,7 @@ const blogPosts = [
   },
   {
     title: "The Power of Business Analysis in Driving Growth",
-    image: "businessPower.jpg",
+    image: "businessPower.webp",
     excerpt:
       "Business analysis is the backbone of strategic growth. Learn how data-driven insights and market analysis can propel your organization forward.",
   },
