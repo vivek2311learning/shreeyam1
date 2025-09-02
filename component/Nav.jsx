@@ -68,7 +68,8 @@ const Nav = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="flex items-center gap-1 hover:underline transition-colors duration-300"
             >
-              Services <SlArrowDown className={`w-3 h-3 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} />
+              <Link href="/services">Services</Link>
+              <SlArrowDown className={`w-3 h-3 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} />
             </button>
             <div
               className={`absolute top-full right-0 mt-3 bg-white/20 backdrop-blur-md text-black border border-white/30 p-4 rounded-xl shadow-lg transform transition-all duration-300 origin-top-right ${

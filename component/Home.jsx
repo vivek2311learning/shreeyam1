@@ -30,8 +30,8 @@ const Home = () => {
           {[
             { src: "hero1.jpg", text1: "Where Every Problem", text2: "Meets the Right Solution" },
             { src: "hero2.jpg", text1: "Clarity. Precision.", text2: "Innovation at Every Step" },
-            { src: "hero3.jpg", text1: "Consulting That", text2: "Drives Growth" },
-            { src: "hero4.jpg", text1: "Designing Purposeful", text2: "Spaces & Strategies" },
+            { src: "hero3.jpg", text1: "Consultation That", text2: "Drives Growth" },
+            { src: "hero4.jpg", text1: "Strength in Advocacy", text2: "Trust in Service" },
           ].map(({ src, text1, text2 }, i) => (
             <SwiperSlide key={i}>
               <div className="relative w-full h-[90vh] sm:h-screen">
@@ -45,7 +45,7 @@ const Home = () => {
                     <p data-aos="fade-right" data-aos-delay="300">
                       {text1}
                     </p>
-                    <p data-aos="fade-right" data-aos-delay="600">
+                    <p data-aos="fade-right" data-aos-delay="1000">
                       {text2}
                     </p>
                   </h1>
@@ -61,7 +61,7 @@ const Home = () => {
   <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 bg-amber-400 rounded-tr-4xl rounded-bl-4xl overflow-hidden">
     <div className="flex justify-center items-center p-4">
       <img
-        src="legal.webp"
+        src="legal.jpg"
         alt="Consulting illustration"
         className="w-full max-w-md object-contain rounded-4xl hover:scale-105 transition-transform duration-400"
         data-aos="fade-right"

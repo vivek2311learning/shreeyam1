@@ -22,7 +22,7 @@ const BusinessConsulting = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-[80vh]" ref={heroRef}>
         <img
-          src="/business.webp"
+          src="/business.jpg"
           alt="Business Consulting"
           className="w-full h-full object-cover object-center"
         />

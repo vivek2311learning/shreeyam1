@@ -15,7 +15,7 @@ export default function Services() {
       title: "Business Consulting",
       description:
         "Strategies and solutions tailored to help your business grow, improve efficiency, and achieve long-term success.",
-      image: "/business.webp",
+      image: "/business.jpg",
       href: "/business",
     },
     {
@@ -50,20 +50,16 @@ export default function Services() {
           alt="Services"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-          <h1
-            className={`text-white text-3xl md:text-5xl font-bold text-center ${animateText(
-              sectionInView,
-              "animate__fadeInDown"
-            )}`}
-          >
-            Our Services
-          </h1>
-        </div>
+       
       </div>
 
       {/* Categories */}
+    <h1 className="text-[#2c3e50] text-center text-base sm:text-4xl font-bold mt-4">
+  Our Services
+</h1>
+
       <section ref={sectionRef} className="px-6 py-20 sm:px-10 lg:px-20">
+    
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {categories.map((cat, index) => (
             <div

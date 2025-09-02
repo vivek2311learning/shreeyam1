@@ -37,9 +37,9 @@ const AboutUs = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-[80vh]" ref={heroRef}>
         <img
-          src="/about.webp"
+          src="/about.jpg"
           alt="About Us Hero"
-          className="w-full h-full object-cover object-center"
+          className="relative w-full h-[70vh] md:h-[80vh] object-cover animate__animated animate__zoomIn"
         />
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <p
