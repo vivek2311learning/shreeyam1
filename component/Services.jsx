@@ -52,13 +52,14 @@ export default function Services() {
         />
        
       </div>
+      <div className="bg-[#e4e6dd] p-8">
 
       {/* Categories */}
-    <h1 className="text-[#2c3e50] text-center text-base sm:text-4xl font-bold mt-4">
+    <h1 className="text-[#2c3e50] text-center text-base sm:text-4xl font-bold">
   Our Services
 </h1>
 
-      <section ref={sectionRef} className="px-6 py-20 sm:px-10 lg:px-20">
+      <section ref={sectionRef} className="px-6 py-16 sm:px-10 lg:px-20">
     
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {categories.map((cat, index) => (
@@ -87,6 +88,7 @@ export default function Services() {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }
